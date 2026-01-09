@@ -14,7 +14,7 @@ const Expertises = () => {
   const x2 = useTransform(scrollYProgress, [0, 1], [0, 200]);
 
   const line1 = ["HTML5", "CSS3","SASS", "JavaScript", "React", "Redux"];
-  const line2 = ["WordPress", "Betheme", "CMS"  ];
+  const line2 = ["WordPress", "SEO", "Maintenance web"  ];
 
   return (
     <section className="expertises" id="expertises" ref={containerRef}>
@@ -40,10 +40,6 @@ const Expertises = () => {
             <span key={index} className="skill-item outline">{skill}</span>
           ))}
         </motion.div>
-      </div>
-
-      <div className="expertises__details">
-        <p>Expertise en intégration pixel-perfect, développement de thèmes WordPress sur mesure et sensibilisation à l'éco-conception web.</p>
       </div>
     </section>
   );
