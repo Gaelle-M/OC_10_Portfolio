@@ -10,10 +10,10 @@ const Expertises = () => {
   });
 
 
-  const x1 = useTransform(scrollYProgress, [0, 1], [0, -200]);
+  const x1 = useTransform(scrollYProgress, [0, 1], [0, -50]);
   const x2 = useTransform(scrollYProgress, [0, 1], [0, 200]);
 
-  const line1 = ["HTML5", "CSS3","SASS", "JavaScript", "React", "Redux"];
+  const line1 = ["HTML5", "CSS3/SASS", "JavaScript", "React", "Redux"];
   const line2 = ["WordPress", "SEO", "Maintenance web"  ];
 
   return (

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { projects } from '../../data/projectsData'; 
+import { projects } from '../../data/projectsData';
 import { Link } from 'react-router-dom';
 import './Projects.scss';
 
