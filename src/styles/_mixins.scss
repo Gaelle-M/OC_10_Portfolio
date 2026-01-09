@@ -1,0 +1,29 @@
+// --- 1. FLEXBOX ---
+@mixin flex($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+// --- 2. MEDIA QUERIES (Pour le responsive) ---
+// Utilisation : @include mobile { ... }
+@mixin tablet {
+  @media (max-width: 768px) { @content; }
+}
+
+@mixin mobile {
+  @media (max-width: 480px) { @content; }
+}
+
+// --- 3. TITRES DÉCORATIFS ---
+@mixin title-style($font: 'Lexend') {
+  font-family: $font;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+// --- 4. EFFET DE TRANSITION ---
+@mixin transition($time: 0.3s) {
+  transition: all $time ease-in-out;
+}

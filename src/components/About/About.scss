@@ -1,0 +1,105 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.about {
+    padding: 100px 10%;
+    background-color: transparent;
+
+    &__container {
+        @include flex(space-between, flex-start);
+        gap: 50px;
+
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__image-wrapper {
+        flex: 1;
+        position: relative;
+        max-width: 400px;
+
+        .skill-text-animated {
+            display: inline-block;
+            margin-left: 10px;
+            color: $color-secondary;
+            font-family: $font-accent;
+            font-size: 2.8rem;
+            letter-spacing: 0.8px;
+
+            // Style du curseur clignotant
+            .Typewriter__cursor {
+                color: $color-secondary;
+                font-family: $font-main;
+                font-weight: 200;
+            }
+        }
+
+        &__badge {
+            margin-top: 15px; // Espace entre la photo et le texte
+            display: flex;
+            flex-direction: column; // Force le passage à la ligne (le "saut de ligne")
+            align-items: flex-start; // Aligne bien à gauche sous la photo
+            gap: 5px; // Espace précis entre "Je suis :" et les mots
+
+            .badge-title {
+                font-family: $font-main;
+                font-size: 1.1rem;
+                color: white;
+            }
+
+            .skill-text-animated {
+                color: $color-secondary;
+                font-family: $font-accent;
+                font-size: 2.2rem; // Taille généreuse pour l'effet écriture
+                line-height: 1.2;
+                min-height: 50px; // Évite que le texte du dessous ne bouge pendant l'anim
+
+                .Typewriter__cursor {
+                    color: $color-secondary;
+                }
+            }
+        }
+
+        .about__photo {
+            width: 100%;
+            border-radius: 15px;
+            filter: grayscale(40%);
+            transition: filter 0.5s ease;
+            &:hover {
+                filter: grayscale(0%);
+            }
+        }
+    }
+
+    &__content {
+        flex: 1.5;
+    }
+
+    &__text {
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-size: 1.1rem;
+            color: white;
+        }
+    }
+
+    .btn-read-more {
+        background: none;
+        border: none;
+        border-bottom: 2px solid $color-secondary;
+        color: $color-secondary;
+        font-family: $font-main;
+        cursor: pointer;
+        font-size: 1.1rem;
+        padding: 5px 0;
+        margin-top: 10px;
+        @include transition;
+
+        &:hover {
+            letter-spacing: 1px;
+        }
+    }
+}

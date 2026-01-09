@@ -1,0 +1,42 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+
+// Reset de base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: $font-main, serif;
+  color: $color-white;
+  background: $color-primary;
+  transition: 0.7s ease-in-out;
+}
+
+// Réglages rapides pour les éléments communs
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+  
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

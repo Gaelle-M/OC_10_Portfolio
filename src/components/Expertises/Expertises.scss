@@ -1,0 +1,53 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.expertises {
+  padding: 100px 0;
+  overflow: hidden;
+  background-color: transparent;
+
+  .title-section {
+    padding-left: 10%;
+    margin-bottom: 50px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+
+  &__line {
+    display: flex;
+    white-space: nowrap;
+    gap: 30px;
+    font-size: 4.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: $font-main;
+
+    @include tablet {
+      font-size: 3rem;
+    }
+
+    .skill-item {
+      color: white;
+      
+      &.outline {
+        color: transparent;
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+
+  &__details {
+    padding: 0 10%;
+    max-width: 800px;
+    p {
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+    }
+  }
+}
