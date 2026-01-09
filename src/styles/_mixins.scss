@@ -7,7 +7,6 @@
 }
 
 // --- 2. MEDIA QUERIES (Pour le responsive) ---
-// Utilisation : @include mobile { ... }
 @mixin tablet {
   @media (max-width: 768px) { @content; }
 }

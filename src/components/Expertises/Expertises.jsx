@@ -9,7 +9,7 @@ const Expertises = () => {
     offset: ["start end", "end start"]
   });
 
-  // Création des mouvements opposés pour les lignes
+
   const x1 = useTransform(scrollYProgress, [0, 1], [0, -200]);
   const x2 = useTransform(scrollYProgress, [0, 1], [0, 200]);
 

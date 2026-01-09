@@ -9,7 +9,7 @@
     @include flex(space-around, center);
     z-index: 1000;
     background-color: rgba(3, 40, 52, 0.8);
-    backdrop-filter: blur(10px); // Petit effet de flou moderne
+    backdrop-filter: blur(10px); 
 
     &__links {
         @include flex(center, center);

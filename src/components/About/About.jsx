@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'; // Ajout de useEffect
+import {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import './About.scss';
 import photoProfil from '../../assets/img/image-gaelle-a-propos.jpg';
@@ -86,7 +86,6 @@ const About = () => {
                                         }} className="about__hidden-text" style={{
                                             overflow: 'hidden'
                                         }}
-                                        // Évite les bugs visuels pendant l'anim
 >
                                         <p>Je maîtrise aujourd'hui HTML, CSS, JavaScript, React et WordPress, des
                                             technologies que je mobilise quotidiennement dans mes projets. Mon approche se
