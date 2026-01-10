@@ -11,6 +11,10 @@
     margin-bottom: 50px;
     text-align: center;
     font-size: 2.5rem;
+
+    @include tablet {
+      font-size: 2rem;
+    }
   }
 
   &__wrapper {
@@ -30,7 +34,8 @@
     font-family: $font-main;
 
     @include tablet {
-      font-size: 3rem;
+      font-size: 1rem;
+      gap: 5px;
     }
 
     .skill-item {

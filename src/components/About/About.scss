@@ -5,6 +5,10 @@
     padding: 100px 10% 0;
     background-color: transparent;
 
+    @include tablet {
+        padding: 30px 10% 0;
+    }
+
     &__container {
         @include flex(space-between, flex-start);
         gap: 50px;
@@ -12,6 +16,8 @@
         @include tablet {
             flex-direction: column;
             align-items: center;
+            gap: 20px;
+            text-align: center;
         }
     }
 
@@ -42,6 +48,10 @@
             flex-direction: column; 
             align-items: flex-start;
             gap: 5px;
+
+            @include tablet {
+                text-align: center;
+            }
 
             .badge-title {
                 font-family: $font-main;
@@ -87,6 +97,10 @@
             line-height: 1.6;
             font-size: 1rem;
             color: white;
+
+            @include tablet {
+                margin-top: 20px;
+            }
         }
     }
 
