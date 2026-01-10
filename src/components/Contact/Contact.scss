@@ -1,0 +1,157 @@
+@use "../../styles/variables" as *;
+
+.contact {
+    padding: 0 100px 5%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 80px;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__info {
+        h2 {
+            margin-bottom: 30px;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .contact__details {
+            p {
+                margin-bottom: 15px;
+                color: white;
+
+                strong {
+                    color: $color-secondary;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    &__form {
+        // --- L'EFFET GLASSMORPHISM ---
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 30px;
+        padding: 50px;
+        box-shadow: 0 8px 32px 0 rgba(235, 225, 225, 0.205);
+        // ----------------------------
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .form-group {
+            input,
+            textarea {
+                width: 100%;
+                background: rgba(255, 255, 255, 0.08);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 12px;
+                padding: 15px 20px;
+                color: white;
+                font-family: inherit;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+
+                &::placeholder {
+                    color: rgba(255, 255, 255, 0.639);
+                }
+
+                &:focus {
+                    outline: none;
+                    border-color: $color-secondary;
+                    background: rgba(255, 255, 255, 0.12);
+                }
+            }
+
+            textarea {
+                resize: none;
+            }
+        }
+
+        .btn-submit {
+            background: $color-secondary;
+            color: #1a1a1a;
+            border: none;
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba($color-secondary, 0.4);
+                filter: brightness(1.1);
+            }
+
+            &:active {
+                transform: translateY(0);
+            }
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            label {
+                font-size: 0.85rem;
+                margin-bottom: 8px;
+                color: rgba(255, 255, 255, 0.7);
+                font-weight: 500;
+            }
+
+            input.input-error,
+            textarea.input-error {
+                border-color: #ff4d4d !important;
+                background: rgba(255, 77, 77, 0.05);
+            }
+
+            .error-msg {
+                color: #ff4d4d;
+                font-size: 0.75rem;
+                margin-top: 5px;
+                font-weight: 500;
+                animation: fadeIn 0.3s ease;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+// Responsive
+@media (max-width: 992px) {
+    .contact__container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .contact__form {
+        padding: 30px;
+    }
+}
