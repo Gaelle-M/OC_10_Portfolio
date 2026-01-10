@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HiMenuAlt3, HiX } from 'react-icons/hi'; // Assure-toi d'avoir react-icons installé
+import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import './Navbar.scss';
 
 const Navbar = () => {

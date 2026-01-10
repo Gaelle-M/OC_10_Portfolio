@@ -1,0 +1,55 @@
+@use "../../styles/variables" as *;
+
+.project-detail-content {
+  display: flex;
+  gap: 50px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+
+  .text-content {
+    flex: 1;
+    h1 { 
+        font-size: 3rem;
+        margin-bottom: 10px;
+        font-family: $font-accent;
+    }
+    .subtitle { font-size: 1.5rem; opacity: 0.8; margin-bottom: 30px; }
+    
+    .detail-item {
+      margin-bottom: 25px;
+      h3 { color: #fbbb08; margin-bottom: 10px; }
+      p { line-height: 1.6; }
+    }
+  }
+
+  .media-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .media-item {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      img, video { width: 100%; display: block; }
+    }
+  }
+
+  .project-links {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    a {
+      color: white;
+      text-decoration: underline;
+      font-weight: bold;
+      &:hover { color: #fbbb08; }
+    }
+  }
+}
