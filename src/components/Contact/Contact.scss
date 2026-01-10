@@ -141,6 +141,18 @@
                 transform: translateY(0);
             }
         }
+
+        .success-message {
+            margin-top: 15px;
+            color: #4BB543; // Un beau vert succès
+            background: rgba(75, 181, 67, 0.1); // Un fond léger vert
+            border: 1px solid rgba(75, 181, 67, 0.3);
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
     }
 }
 
