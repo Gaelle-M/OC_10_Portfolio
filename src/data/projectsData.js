@@ -59,7 +59,7 @@ export const projects = [
       "Dans le cadre du lancement d'une nouvelle banque en ligne, j'ai dû transformer un site statique en une application web dynamique et évolutive.",
     objectives:
       " L'enjeu principal était d'implémenter un système d'authentification sécurisé et de permettre la gestion en temps réel des profils utilisateurs. ",
-    stackIcons: ["REACT", "SCSS", "Redux", "TypeScript"],
+    stackIcons: ["React", "Sass", "Redux", "Typescript"],
     stackDetailed:
       "L'application utilise REACT et TypeScript pour la structure, Redux Toolkit pour la gestion d'état global, et SCSS pour le stylage. ",
     skills:
@@ -87,7 +87,7 @@ export const projects = [
       "Refonte complète du site vitrine de Yesss Communication, agence de communication marseillaise, dans le cadre de mon alternance. Ce projet stratégique visait à moderniser la présence digitale de l'agence tout en intégrant une démarche d'éco-conception web.",
     objectives:
       "Créer un site performant et attractif tout en respectant les principes d'éco-conception pour réduire l'empreinte environnementale. Le défi était de trouver l'équilibre entre animations engageantes, design moderne et optimisation des ressources pour un site léger et responsable.",
-    stackIcons: ["WordPress", "Betheme", "datCampus"],
+    stackIcons: ["Wordpress", "Betheme", "dataCampus"],
     stackDetailed:
       "CMS : WordPress avec thème BeTheme / Frontend : HTML/CSS, animations CSS et JavaScript SEO & / Performance : Optimisation technique et référencement naturel / Hébergement : Serveur vert pour réduire l'impact carbone.",
     skills:
@@ -118,7 +118,7 @@ export const projects = [
       "Développement du site institutionnel du Centre de Recherche en Cancérologie de Marseille dans le cadre de mon alternance. Ce projet d'envergure devait valoriser les activités de recherche du centre tout en structurant une importante base de données d'équipes et de membres.",
     objectives:
       "Créer un site bilingue (français/anglais) capable de gérer efficacement de nombreuses équipes et membres tout en maintenant des performances optimales. Le principal défi était d'organiser et d'afficher un volume conséquent de contenus sans compromettre la fluidité de navigation et les temps de chargement.",
-    stackIcons: ["WordPress", "Betheme", "dataCampus"],
+    stackIcons: ["Wordpress", "Betheme", "dataCampus"],
     stackDetailed:
       "CMS : WordPress avec gestion multilingue / Optimisation : Plugins de performance et mise en cache, système de gestion de membres personnalisé / Hébergement : Serveur vert / Architecture : Structure modulaire pour faciliter la maintenance des pages équipes / SEO : Référencement naturel.",
     skills:

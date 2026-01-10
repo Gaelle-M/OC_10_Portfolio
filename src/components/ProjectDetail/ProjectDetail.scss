@@ -1,55 +1,68 @@
-@use "../../styles/variables" as *;
-
 .project-detail-content {
-  display: flex;
-  gap: 50px;
-  padding: 40px;
-  max-width: 1400px;
-  margin: 0 auto;
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-  }
-
-  .text-content {
-    flex: 1;
-    h1 { 
-        font-size: 3rem;
-        margin-bottom: 10px;
-        font-family: $font-accent;
-    }
-    .subtitle { font-size: 1.5rem; opacity: 0.8; margin-bottom: 30px; }
-    
-    .detail-item {
-      margin-bottom: 25px;
-      h3 { color: #fbbb08; margin-bottom: 10px; }
-      p { line-height: 1.6; }
-    }
-  }
-
-  .media-content {
-    flex: 1;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    gap: 60px;
+    padding: 100px 5%;
+    max-width: 1600px;
+    margin: 0 auto;
 
-    .media-item {
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      img, video { width: 100%; display: block; }
+    @media (max-width: 1100px) {
+        flex-direction: column;
+        padding-top: 60px;
     }
-  }
 
-  .project-links {
-    margin-top: 40px;
-    display: flex;
-    gap: 20px;
-    a {
-      color: white;
-      text-decoration: underline;
-      font-weight: bold;
-      &:hover { color: #fbbb08; }
+    .text-content {
+        flex: 0.8;
+
+        .tech-stack-icons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            opacity: 0.9;
+        }
+
+        h3 {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
     }
-  }
+
+    .media-content {
+        flex: 1.2;
+        min-width: 0;
+
+        .project-slider {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+
+            // Personnalisation flèches Swiper
+            --swiper-navigation-color: #fff;
+            --swiper-pagination-color: #fff;
+            --swiper-navigation-size: 40px;
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+                transition: transform 0.2s ease;
+
+                &:hover {
+                    transform: scale(1.2); // Petit effet de zoom au survol
+                }
+            }
+
+        }
+
+        .media-item {
+            img,
+            video {
+                width: 100%;
+                height: auto;
+                display: block;
+                object-fit: contain;
+            }
+        }
+    }
 }
