@@ -18,10 +18,10 @@ const Navbar = () => {
 
         {/* Liens de navigation */}
         <ul className={`navbar__links ${isOpen ? 'active' : ''}`}>
-          <li><a href="#home" onClick={() => setIsOpen(false)}>Accueil</a></li>
+          <li><a href="#" onClick={() => setIsOpen(false)}>Accueil</a></li>
           <li><a href="#about" onClick={() => setIsOpen(false)}>À propos</a></li>
           <li><a href="#expertises" onClick={() => setIsOpen(false)}>Expertises</a></li>
-          <li><a href="#projects" onClick={() => setIsOpen(false)}>Projets</a></li>
+          <li><a href="#projets" onClick={() => setIsOpen(false)}>Projets</a></li>
           <li><a href="#contact" onClick={() => setIsOpen(false)}>Contact</a></li>
         </ul>
       </div>
