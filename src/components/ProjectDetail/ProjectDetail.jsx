@@ -59,6 +59,16 @@ const ProjectDetail = ({ project }) => {
             <h3>Compétences</h3>
             <p>{project.skills}</p>
           </div>
+
+          <div className="detail-item">
+            <h3>Résultats</h3>
+            <p>{project.results}</p>
+          </div>
+
+          <div className="detail-item">
+            <h3>Améliorations futures</h3>
+            <p>{project.improvements}</p>
+          </div>
         </div>
 
         <div className="project-links">
