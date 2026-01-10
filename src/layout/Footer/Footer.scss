@@ -1,0 +1,44 @@
+@use "../../styles/variables" as *;
+
+.footer {
+  padding: 40px 10%;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: transparent;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    p {
+      color: $color-white;
+      font-size: 0.9rem;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 20px;
+
+    a {
+      color: white;
+      font-size: 1.9rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+
+      &:hover {
+        color: $color-secondary;
+        transform: translateY(-3px);
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .footer__content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
