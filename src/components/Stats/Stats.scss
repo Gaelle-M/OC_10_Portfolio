@@ -1,8 +1,13 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .stats-section {
   padding: 50px 100px 10%;
   background-color: transparent;
+
+  @include tablet {
+    padding: 50px 50px 10%;
+  }
 
   .title-section {
     font-size: 2rem;
