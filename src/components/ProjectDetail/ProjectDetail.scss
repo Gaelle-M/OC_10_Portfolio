@@ -1,4 +1,5 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .project-detail-content {
     display: flex;
@@ -38,13 +39,32 @@
     }
 
     .media-content {
-        flex: 1.2; // Assure-toi que la section a une largeur
-        min-width: 0; // Important pour Swiper
+        display: flex;
+        flex: 1.2;
+        min-width: 0;
+
+        .media-item {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a7a; 
+            border-radius: 20px;
+            overflow: hidden;
+
+            img,
+            video {
+                width: 100%;
+                height: auto;
+                max-height: 70vh; 
+                object-fit: contain; 
+            }
+        }
 
         .project-slider {
-            padding-bottom: 50px; // Augmente un peu l'espace
+            padding-bottom: 50px;
 
-            // --- MODIFICATION ICI : .swiper-pagination au lieu de .swiper-pagination-bullets ---
             .swiper-pagination {
                 bottom: 0 !important;
             }
@@ -52,7 +72,7 @@
             .swiper-pagination-bullet {
                 width: 10px;
                 height: 10px;
-                background: #ffffff !important; // Ajoute !important pour tester
+                background: #ffffff !important;
                 opacity: 0.5;
 
                 &-active {
@@ -63,7 +83,6 @@
                 }
             }
 
-            // Augmenter la taille des flèches si besoin
             --swiper-navigation-size: 30px;
             --swiper-navigation-color: #fff;
         }

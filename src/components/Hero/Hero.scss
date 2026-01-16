@@ -41,6 +41,9 @@
             font-size: clamp(2.5rem, 4vw, 2rem) !important;
             margin-top: 1rem;
         }
+        @media screen and (max-width: 425px) {
+            font-size: clamp(1.4rem, 3vw, 2rem) !important;
+        }
 
         &.left {
             align-self: flex-start;
