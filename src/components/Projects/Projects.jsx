@@ -37,7 +37,7 @@ const Projects = () => {
               <Link to={project.link} className="project-card">
                 <motion.div className="project-card__inner" whileHover="hover">
                   <div className="project-card__image-container">
-                    <img src={project.img} alt={project.title} />
+                    <img src={project.img} alt={project.title} loading="lazy"/>
                     
                     <motion.div 
                       className="project-card__overlay"

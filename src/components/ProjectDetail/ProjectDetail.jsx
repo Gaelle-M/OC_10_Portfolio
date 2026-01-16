@@ -1,11 +1,12 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, A11y } from 'swiper/modules';
 import { SiHtml5, SiSass, SiCss3, SiReact, SiRedux, SiWordpress, SiTypescript, SiJavascript } from 'react-icons/si';
+import { Helmet } from 'react-helmet-async'; 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
+import 'swiper/css/a11y';
 import './ProjectDetail.scss';
 
 const getIcon = (name) => {
@@ -25,12 +26,17 @@ const getIcon = (name) => {
 const ProjectDetail = ({ project }) => {
   return (
     <div className="project-detail-content">
+      {/* Ajout du SEO */}
+      <Helmet>
+        <title>{project.title} | Portfolio</title>
+        <meta name="description" content={project.subtitle} />
+      </Helmet>
+
       {/* SECTION Gauche - Texte */}
       <section className="text-content">
         <h1 style={{ color: project.color }}>{project.title}</h1>
         <p className="subtitle">{project.subtitle}</p>
 
-        {/* logos technos */}
         <div className="tech-stack-icons">
           {project.stackIcons?.map((iconName) => (
             <span key={iconName} className="tech-icon" title={iconName} style={{ color: project.color }}>
@@ -44,27 +50,22 @@ const ProjectDetail = ({ project }) => {
             <h3>Contexte</h3>
             <p>{project.context}</p>
           </div>
-
           <div className="detail-item">
             <h3>Objectifs</h3>
             <p>{project.objectives}</p>
           </div>
-
           <div className="detail-item">
             <h3>Stack technique</h3>
             <p>{project.stackDetailed}</p>
           </div>
-
           <div className="detail-item">
             <h3>Compétences</h3>
             <p>{project.skills}</p>
           </div>
-
           <div className="detail-item">
             <h3>Résultats</h3>
             <p>{project.results}</p>
           </div>
-
           <div className="detail-item">
             <h3>Améliorations futures</h3>
             <p>{project.improvements}</p>
@@ -83,10 +84,18 @@ const ProjectDetail = ({ project }) => {
       {/* SECTION DROITE - Slider */}
       <section className="media-content">
         <Swiper
-          modules={[Navigation, Pagination]}
+          modules={[Navigation, Pagination, A11y]}
+          lazy={true}
           spaceBetween={30}
           slidesPerView={1}
           navigation={true}
+          a11y={{
+            prevSlideMessage: 'Diapositive précédente',
+            nextSlideMessage: 'Diapositive suivante',
+            firstSlideMessage: 'Ceci est la première diapositive',
+            lastSlideMessage: 'Ceci est la dernière diapositive',
+            paginationBulletMessage: 'Aller à la diapositive {{index}}',
+          }}
           pagination={{ 
               clickable: true,
               dynamicBullets: true
@@ -100,7 +109,7 @@ const ProjectDetail = ({ project }) => {
                 {item.type === 'video' ? (
                   <video src={item.url} autoPlay muted loop playsInline title={item.alt} />
                 ) : (
-                  <img src={item.url} alt={item.alt || `${project.title} mockup ${index}`} />
+                  <img src={item.url} alt={item.alt || `${project.title} mockup ${index}`} loading="lazy"/>
                 )}
               </div>
             </SwiperSlide>

@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import './About.scss';
-import photoProfil from '../../assets/img/image-gaelle-a-propos.jpg';
+import photoProfil from '../../assets/img/image-gaelle-a-propos.webp';
 import Typewriter from 'typewriter-effect';
 
 const About = () => {
@@ -24,7 +24,7 @@ const About = () => {
                         duration: 0.8
                     }}
                     className="about__image-wrapper">
-                    <img src={photoProfil} alt="Photo de profil de Gaëlle Mazzali" className="about__photo"/>
+                    <img src={photoProfil} alt="Photo de profil de Gaëlle Mazzali" className="about__photo" loading="lazy"/>
 
                     <div className="about__badge">
                         <span className="badge-title">Je suis :</span>
