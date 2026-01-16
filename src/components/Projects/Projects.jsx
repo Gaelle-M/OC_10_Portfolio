@@ -1,6 +1,15 @@
-import { motion } from 'framer-motion';
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper/modules';
 import { projects } from '../../data/projectsData';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+// N'oublie pas les imports CSS de Swiper si ce n'est pas déjà fait globalement
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 import './Projects.scss';
 
 const Projects = () => {
@@ -9,44 +18,54 @@ const Projects = () => {
       <h2 className="title-section">Mes Réalisations</h2>
       
       <div className="projects__slider-container">
-        <motion.div 
-          drag="x" 
-          dragConstraints={{ right: 0, left: -1000 }} 
-          className="projects__track"
+        <Swiper
+          modules={[Pagination, Navigation]}
+          spaceBetween={30}
+          slidesPerView={1} // Par défaut 1 sur mobile
+          centeredSlides={false}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            // Quand l'écran est >= 768px (Tablette)
+            768: {
+              slidesPerView: 2,
+            },
+            // Quand l'écran est >= 1100px (Desktop)
+            1100: {
+              slidesPerView: 3,
+            }
+          }}
+          className="projects__swiper"
         >
           {projects.map((project) => (
-            <Link to={project.link} key={project.id} className="project-card">
-              <motion.div 
-                className="project-card__inner"
-                whileHover="hover"
-              >
-                <div className="project-card__image-container">
-                  <img src={project.img} alt={project.title} />
-                  
-                  {/* Overlay de couleur au hover */}
-                  <motion.div 
-                    className="project-card__overlay"
-                    variants={{
-                      hover: { opacity: 0.9, backgroundColor: project.color }
-                    }}
-                  />
+            <SwiperSlide key={project.id}>
+              <Link to={project.link} className="project-card">
+                <motion.div className="project-card__inner" whileHover="hover">
+                  <div className="project-card__image-container">
+                    <img src={project.img} alt={project.title} />
+                    
+                    <motion.div 
+                      className="project-card__overlay"
+                      variants={{
+                        hover: { opacity: 0.9, backgroundColor: project.color }
+                      }}
+                    />
 
-                  {/* Infos du projet */}
-                  <motion.div 
-                    className="project-card__info"
-                    variants={{
-                      hover: { y: 0, opacity: 1 }
-                    }}
-                    initial={{ y: 20, opacity: 0 }}
-                  >
-                    <h3>{project.title}</h3>
-                    <p>{project.tech}</p>
-                  </motion.div>
-                </div>
-              </motion.div>
-            </Link>
+                    <motion.div 
+                      className="project-card__info"
+                      variants={{
+                        hover: { y: 0, opacity: 1 }
+                      }}
+                      initial={{ y: 20, opacity: 0 }}
+                    >
+                      <h3>{project.title}</h3>
+                      <p>{project.tech}</p>
+                    </motion.div>
+                  </div>
+                </motion.div>
+              </Link>
+            </SwiperSlide>
           ))}
-        </motion.div>
+        </Swiper>
       </div>
     </section>
   );

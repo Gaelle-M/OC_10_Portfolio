@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
-import { NavHashLink } from 'react-router-hash-link'; // On garde juste cet import
+import { NavHashLink } from 'react-router-hash-link'; 
 import './Navbar.scss';
 
 const Navbar = () => {

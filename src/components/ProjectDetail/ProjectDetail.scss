@@ -16,9 +16,9 @@
         flex: 0.8;
 
         h1 {
-          font-family: $font-accent;
-          margin-bottom: 10px;
-          font-size: 2.3rem;
+            font-family: $font-accent;
+            margin-bottom: 10px;
+            font-size: 2.3rem;
         }
 
         .tech-stack-icons {
@@ -38,39 +38,34 @@
     }
 
     .media-content {
-        flex: 1.2;
-        min-width: 0;
+        flex: 1.2; // Assure-toi que la section a une largeur
+        min-width: 0; // Important pour Swiper
 
         .project-slider {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            padding-bottom: 50px; // Augmente un peu l'espace
 
-            // Personnalisation flèches Swiper
-            --swiper-navigation-color: #fff;
-            --swiper-pagination-color: #fff;
-            --swiper-navigation-size: 40px;
+            // --- MODIFICATION ICI : .swiper-pagination au lieu de .swiper-pagination-bullets ---
+            .swiper-pagination {
+                bottom: 0 !important;
+            }
 
-            .swiper-button-next,
-            .swiper-button-prev {
-                filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
-                transition: transform 0.2s ease;
+            .swiper-pagination-bullet {
+                width: 10px;
+                height: 10px;
+                background: #ffffff !important; // Ajoute !important pour tester
+                opacity: 0.5;
 
-                &:hover {
-                    transform: scale(1.2); // Petit effet de zoom au survol
+                &-active {
+                    opacity: 1;
+                    background: $color-secondary !important;
+                    width: 25px;
+                    border-radius: 5px;
                 }
             }
 
-        }
-
-        .media-item {
-            img,
-            video {
-                width: 100%;
-                height: auto;
-                display: block;
-                object-fit: contain;
-            }
+            // Augmenter la taille des flèches si besoin
+            --swiper-navigation-size: 30px;
+            --swiper-navigation-color: #fff;
         }
     }
 }

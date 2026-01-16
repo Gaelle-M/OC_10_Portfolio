@@ -7,7 +7,7 @@
     background-color: transparent;
 
     @include tablet {
-        padding: 80px 0 30px;
+        padding: 60px 0 30px;
     }
 
     .title-section {
@@ -27,31 +27,34 @@
         gap: 30px;
 
         @include tablet {
-            gap: 50px; 
+            gap: 30px; 
         }
     }
 
     &__line {
         display: flex;
-        white-space: nowrap; 
-        gap: 30px;
-        font-size: clamp(4rem, 7vw, 4rem); 
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px 30px;
+        padding: 0 4%;
+        
+        font-size: clamp(1.8rem, 4.5vw, 3.5rem); 
+        
         font-weight: 800;
         text-transform: uppercase;
         font-family: $font-main;
+        text-align: center;
 
         @include tablet {
-            flex-wrap: wrap;      
-            justify-content: center; 
-            white-space: normal;  
-            gap: 15px 20px;        
-            font-size: 1.8rem;    
-            transform: none !important; 
+            gap: 15px 25px;
+            transform: none !important;
         }
 
         .skill-item {
             display: inline-block;
             color: white;
+            white-space: nowrap; 
 
             &.outline {
                 color: transparent;

@@ -2,46 +2,48 @@
 @use "../../styles/mixins" as *;
 
 .projects {
-  padding: 50px 0;
+  padding: 80px 0;
   overflow: hidden;
-
-  @include tablet {
-    padding: 50px 0 0px;
-  }
 
   .title-section {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 40px;
-
-    @include tablet {
-      font-size: 2rem;
-    }
+    margin-bottom: 60px;
   }
 
   &__slider-container {
-    cursor: grab;
-    padding-left: 5%;
+    padding: 0 5%;
+    
+    .swiper-pagination {
+      position: relative;
+      margin-top: 40px;
+      bottom: 0 !important;
 
-    &:active {
-      cursor: grabbing;
+      &-bullet {
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        opacity: 0.3;
+        transition: all 0.3s ease;
+
+        &-active {
+          opacity: 1;
+          background: $color-secondary !important; 
+          width: 25px;
+          border-radius: 5px;
+        }
+      }
     }
   }
 
-  &__track {
-    display: flex;
-    gap: 40px;
-    width: max-content;
-    padding: 30px 0;
-
-    @include tablet {
-      gap: 20px;
-    }
+  &__swiper {
+    padding: 20px 0 10px 0;
+    overflow: visible !important;
   }
 
   .project-card {
     position: relative;
-    width: 500px;
+    width: 100%; 
     height: 350px;
     border-radius: 20px;
     overflow: hidden !important;
@@ -50,17 +52,21 @@
     -webkit-mask-image: -webkit-radial-gradient(white, black);
 
     @include tablet {
-      width: 280px;
-      height: 200px;
+      height: 350px;
+      border-radius: 15px;
     }
 
-    &:last-child {
-      margin-right: 50px;
+    &__inner {
+        width: 100%;
+        height: 100%;
+        border-radius: inherit; 
+        overflow: hidden;
     }
 
     &__image-container {
       width: 100%;
       height: 100%;
+      border-radius: inherit;
       overflow: hidden;
 
       img {
@@ -69,19 +75,19 @@
         object-fit: cover;
         display: block;
         transition: transform 0.5s ease;
+        border-radius: inherit;
       }
     }
 
     &__overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+      border-radius: inherit;
       opacity: 0.6;
       transition: opacity 0.3s ease;
-
-      @media (min-width: 1024px) {
-        opacity: 0;
-      }
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+      
+      @media (min-width: 1024px) { opacity: 0; }
     }
 
     &__info {
@@ -91,32 +97,12 @@
       color: white;
       z-index: 2;
 
-      h3 {
-        font-size: 1.5rem;
-        margin-bottom: 5px;
-        font-family: $font-main;
-
-        @media (min-width: 1024px) {
-          font-size: 2rem;
-        }
-      }
-
-      p {
-        font-size: 0.9rem;
-        opacity: 0.9;
-        font-weight: bold;
-      }
+      h3 { font-size: 1.5rem; margin-bottom: 5px; }
+      p { font-size: 0.9rem; font-weight: bold; }
     }
 
-    @media (min-width: 1024px) {
-      &:hover {
-        .project-card__overlay {
-          opacity: 1;
-        }
-        img {
-          transform: scale(1.1);
-        }
-      }
+    &:hover img {
+      transform: scale(1.1);
     }
   }
 }

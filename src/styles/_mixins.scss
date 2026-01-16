@@ -7,6 +7,10 @@
 }
 
 // --- 2. MEDIA QUERIES (Pour le responsive) ---
+@mixin desktop {
+  @media (max-width: 1024px) { @content; }
+}
+
 @mixin tablet {
   @media (max-width: 768px) { @content; }
 }

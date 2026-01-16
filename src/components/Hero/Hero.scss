@@ -7,6 +7,10 @@
   position: relative;
   overflow: hidden;
 
+ @include desktop {
+  height: 100vh;
+ }
+
  @include tablet {
     height: 60vh;
   }

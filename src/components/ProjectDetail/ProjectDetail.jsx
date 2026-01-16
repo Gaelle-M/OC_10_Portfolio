@@ -82,11 +82,14 @@ const ProjectDetail = ({ project }) => {
       {/* SECTION DROITE - Slider */}
       <section className="media-content">
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
+          modules={[Navigation, Pagination]}
           spaceBetween={30}
           slidesPerView={1}
           navigation={true}
-          pagination={{ clickable: true }}
+          pagination={{ 
+              clickable: true,
+              dynamicBullets: true
+            }}
           loop={project.media?.length > 1}
           className="project-slider"
         >
