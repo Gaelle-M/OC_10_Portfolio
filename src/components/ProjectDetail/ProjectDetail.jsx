@@ -72,6 +72,7 @@ const ProjectDetail = ({ project }) => {
         </div>
 
         <div className="project-links">
+          <h3>Liens utiles</h3>
           <a href={project.github} target="_blank" rel="noreferrer" className="btn-link">GitHub Repo</a>
           {project.demo && (
             <a href={project.demo} target="_blank" rel="noreferrer" className="btn-link">Live Démo</a>

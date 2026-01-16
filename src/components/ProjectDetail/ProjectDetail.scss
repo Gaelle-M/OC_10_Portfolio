@@ -36,6 +36,16 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+
+        .project-links {
+            display: flex;
+            flex-direction: column;
+
+            a {
+                width: fit-content;
+                text-decoration: underline;
+            }
+        }
     }
 
     .media-content {

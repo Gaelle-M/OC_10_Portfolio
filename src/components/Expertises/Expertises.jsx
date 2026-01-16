@@ -11,7 +11,7 @@ const Expertises = () => {
     offset: ["start end", "end start"]
   });
 
-  const x1 = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  const x1 = useTransform(scrollYProgress, [0, 1], [0, 90]);
   const x2 = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
   // Listes de compétences
