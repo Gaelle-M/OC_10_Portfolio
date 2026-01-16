@@ -24,7 +24,7 @@ const About = () => {
                         duration: 0.8
                     }}
                     className="about__image-wrapper">
-                    <img src={photoProfil} alt="Gaëlle Mazzali" className="about__photo"/>
+                    <img src={photoProfil} alt="Photo de profil de Gaëlle Mazzali" className="about__photo"/>
 
                     <div className="about__badge">
                         <span className="badge-title">Je suis :</span>

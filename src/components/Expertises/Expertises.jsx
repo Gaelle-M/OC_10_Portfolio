@@ -5,7 +5,6 @@ import './Expertises.scss';
 const Expertises = () => {
   const containerRef = useRef(null);
   
-  // Animation de scroll pour le Desktop
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"]
@@ -13,12 +12,9 @@ const Expertises = () => {
 
   const x1 = useTransform(scrollYProgress, [0, 1], [0, 90]);
   const x2 = useTransform(scrollYProgress, [0, 1], [0, 100]);
-
-  // Listes de compétences
   const line1 = ["HTML5", "CSS3/SASS", "JavaScript", "React", "Redux"];
   const line2 = ["WordPress", "SEO", "Maintenance web"];
 
-  // Variante d'animation pour l'apparition progressive (Mobile & Desktop)
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i) => ({

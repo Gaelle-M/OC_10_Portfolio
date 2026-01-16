@@ -29,7 +29,7 @@ const Contact = () => {
     
     if (validate()) {
       setIsSending(true);
-      setIsSuccess(false); // On réinitialise au cas où c'est un deuxième envoi
+      setIsSuccess(false); 
 
       emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID, 
@@ -38,12 +38,10 @@ const Contact = () => {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY  
       )
       .then(() => {
-          // On remplace l'alert par le changement d'état
+      
           setIsSuccess(true); 
           setFormData({ name: '', email: '', message: '' });
           setIsSending(false);
-          
-          // Optionnel : faire disparaître le message après 5 secondes
           setTimeout(() => setIsSuccess(false), 5000);
       }, (error) => {
           setIsSending(false);

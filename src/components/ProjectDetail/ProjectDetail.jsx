@@ -98,9 +98,9 @@ const ProjectDetail = ({ project }) => {
             <SwiperSlide key={index}>
               <div className="media-item">
                 {item.type === 'video' ? (
-                  <video src={item.url} autoPlay muted loop playsInline />
+                  <video src={item.url} autoPlay muted loop playsInline title={item.alt} />
                 ) : (
-                  <img src={item.url} alt={`${project.title} mockup ${index}`} />
+                  <img src={item.url} alt={item.alt || `${project.title} mockup ${index}`} />
                 )}
               </div>
             </SwiperSlide>

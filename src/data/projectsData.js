@@ -39,11 +39,11 @@ export const projects = [
     github: "https://github.com/Gaelle-M/OC_3_ohmyfood",
     demo: "https://gaelle-m.github.io/OC_3_ohmyfood/",
     media: [
-      { type: "image", url: mockup1 },
-      { type: "image", url: accueilOhmyfood },
-      { type: "image", url: restauOhmyfood },
-      { type: "image", url: restauAnime1Ohmyfood },
-      { type: "image", url: restauAnime2Ohmyfood },
+      { type: "image", url: mockup1, alt: "Mockup réalisé avec la page d'accueil pour le site OhmyFoud" },
+      { type: "image", url: accueilOhmyfood, alt: "Capture d'écran de la page d'accueil du site OhmyFoud" },
+      { type: "image", url: restauOhmyfood, alt:"Capture d'écran de la page restaurant du site OhmyFoud" },
+      { type: "image", url: restauAnime1Ohmyfood, alt: "Capture d'écran de la page restaurant du site OhmyFoud, montrant une animation" },
+      { type: "image", url: restauAnime2Ohmyfood, alt:"Capture d'écran de la page restaurant du site OhmyFoud, montrant une animation" },
     ],
   },
   {
@@ -70,8 +70,8 @@ export const projects = [
       "Une optimisation future inclurait l'implémentation complète des endpoints de transactions bancaires et l'ajout de tests unitaires pour sécuriser les fonctionnalités critiques.",
     github: " https://github.com/Gaelle-M/OC_9_ArgentBank",
     media: [
-      { type: "image", url: mockup2 },
-      { type: "video", url: videoArgentBank },
+      { type: "image", url: mockup2, alt:"Mockup réalisé avec la page d'accueil pour l'application ArgentBank" },
+      { type: "video", url: videoArgentBank, alt: "Capture d'écran vidéo de l'application ArgentBank" },
     ],
   },
   {
@@ -98,11 +98,11 @@ export const projects = [
       "Je souhaite continuer l'optimisation des performances en améliorant les scores de toutes les pages. L'objectif est d'alléger davantage les assets et d'affiner les animations pour atteindre un équilibre optimal entre impact visuel et sobriété numérique.",
     demo: "https://www.yesss-communication.fr/",
     media: [
-      { type: "image", url: mockup3 },
-      { type: "image", url: Projet1Yesss },
-      { type: "image", url: Projet2Yesss },
-      { type: "video", url: VideoAccueilYesss },
-      { type: "video", url: VideoProjetYesss },
+      { type: "image", url: mockup3, alt: "Mockup réalisé avec la page d'accueil pour le site Yesss Communication" },
+      { type: "image", url: Projet1Yesss, alt: "Capture d'écran montrant une page projet du site Yesss Communication" },
+      { type: "image", url: Projet2Yesss, alt: "Capture d'écran montrant une page projet du site Yesss Communication" },
+      { type: "video", url: VideoAccueilYesss, alt: "Capture vidéo de la page d'accueil du site Yesss Communication" },
+      { type: "video", url: VideoProjetYesss, alt: "Capture vidéo de la projet d'accueil du site Yesss Communication" },
     ],
   },
   {
@@ -129,8 +129,8 @@ export const projects = [
       "Je prévois d'optimiser davantage la fluidité du site en affinant le lazy loading des images et en restructurant certaines requêtes de base de données. L'objectif est de réduire encore les temps de chargement pour offrir une navigation plus rapide malgré la densité du contenu.",
     demo: "https://crcm-marseille.fr/",
     media: [
-      { type: "image", url: mockup4 },
-      { type: "video", url: VideoCrcm },
+      { type: "image", url: mockup4, alt: "Mockup réalisé avec la page accueil du site CRCM" },
+      { type: "video", url: VideoCrcm, alt: "Capture d'écran vidéo de la page accueil du site du CRCM" },
     ],
   },
 ];

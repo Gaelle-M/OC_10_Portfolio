@@ -4,8 +4,6 @@ import { Pagination, Navigation } from 'swiper/modules';
 import { projects } from '../../data/projectsData';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
-// N'oublie pas les imports CSS de Swiper si ce n'est pas déjà fait globalement
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -21,15 +19,13 @@ const Projects = () => {
         <Swiper
           modules={[Pagination, Navigation]}
           spaceBetween={30}
-          slidesPerView={1} // Par défaut 1 sur mobile
+          slidesPerView={1} 
           centeredSlides={false}
           pagination={{ clickable: true }}
           breakpoints={{
-            // Quand l'écran est >= 768px (Tablette)
             768: {
               slidesPerView: 2,
             },
-            // Quand l'écran est >= 1100px (Desktop)
             1100: {
               slidesPerView: 3,
             }
