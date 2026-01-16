@@ -16,7 +16,7 @@ import VideoCrcm from "../assets/img/CRCM/capture-video-accueil-crcm.mp4";
 export const projects = [
   {
     id: 1,
-    title: "Projet Formation : OhmyFood",
+    title: "Projet formation : OhmyFood",
     tech: "HTML/SCSS",
     color: "#e389df",
     img: mockup1,
@@ -76,7 +76,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Projet Alternance : Yesss Communication",
+    title: "Projet alternance : Yesss Communication",
     tech: "WordPress/Betheme/Éco-conception",
     color: "#18b4b9",
     img: mockup3,
@@ -107,7 +107,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Projet Alternance : CRCM",
+    title: "Projet alternance : Crcm",
     tech: "WordPress/Betheme",
     color: "#e9640d",
     img: mockup4,
