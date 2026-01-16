@@ -109,7 +109,7 @@ const ProjectDetail = ({ project }) => {
                 {item.type === 'video' ? (
                   <video src={item.url} autoPlay muted loop playsInline title={item.alt} />
                 ) : (
-                  <img src={item.url} alt={item.alt || `${project.title} mockup ${index}`} loading="lazy"/>
+                  <img src={item.url} alt={item.alt || `${project.title} mockup ${index}`} loading="lazy" width="1200" height="800"/>
                 )}
               </div>
             </SwiperSlide>
