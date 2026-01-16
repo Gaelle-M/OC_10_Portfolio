@@ -12,12 +12,17 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar__container">
 
-        {/* Icône Burger */}
-        <div className="navbar__burger" onClick={toggleMenu}>
+        {/* Bouton Burger */}
+        <button 
+          className="navbar__burger" 
+          onClick={toggleMenu}
+          aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-expanded={isOpen}
+        >
           {isOpen ? <HiX /> : <HiMenuAlt3 />}
-        </div>
+        </button>
 
-        {/* Liens de navigation - Utilisation de NavHashLink pour la compatibilité */}
+        {/* Liens de navigation */}
         <ul className={`navbar__links ${isOpen ? 'active' : ''}`}>
           <li><NavHashLink smooth to="/#hero" onClick={() => setIsOpen(false)}>Accueil</NavHashLink></li>
           <li><NavHashLink smooth to="/#about" onClick={() => setIsOpen(false)}>À propos</NavHashLink></li>
