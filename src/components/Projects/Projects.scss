@@ -51,6 +51,10 @@
     display: block;
     -webkit-mask-image: -webkit-radial-gradient(white, black);
 
+    @include desktop {
+      height: 400px;
+      border-radius: 15px;
+    }
     @include tablet {
       height: 350px;
       border-radius: 15px;

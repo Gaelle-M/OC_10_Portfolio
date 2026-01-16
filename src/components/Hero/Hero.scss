@@ -2,67 +2,72 @@
 @use "../../styles/mixins" as *;
 
 .hero {
-  height: 100vh;
-  @include flex(center, center, column);
-  position: relative;
-  overflow: hidden;
+    height: 100vh;
+    @include flex(center, center, column);
+    position: relative;
+    overflow: hidden;
 
- @include desktop {
-  height: 100vh;
- }
-
- @include tablet {
-    height: 60vh;
-  }
-
-  &__title {
-    font-size: clamp(15rem, 10vw, 8rem);
-    font-family: $font-accent;
-    color: $color-secondary;
-    text-align: center;
-
-    @include tablet {
-      font-size: clamp(3.8rem, 15vw, 5rem) !important;
-      line-height: 1.2;
-    }
-  }
-
-  &__subtitle {
-    font-size: clamp(4rem, 6vw, 4rem);
-    font-family: $font-main;
-    text-transform: uppercase;
-
-    @include tablet {
-      font-size: clamp(1.2rem, 4vw, 2rem);
-      margin-top: 1rem;
+    @include desktop {
+        height: 90vh;
     }
 
-    &.left {
-      align-self: flex-start;
-      margin-left: 10%;
-    }
-    &.right {
-      align-self: flex-end;
-      margin-right: 10%;
-    }
-  }
 
-  &__scroll {
-    position: absolute;
-    bottom: 30px;
-    animation: bounce 2s infinite;
-  }
+    &__title {
+        font-size: clamp(15rem, 10vw, 8rem);
+        font-family: $font-accent;
+        color: $color-secondary;
+        text-align: center;
+
+        @include desktop {
+            font-size: clamp(9rem, 15vw, 8rem) !important;
+        }
+
+        @include tablet {
+            font-size: clamp(3.8rem, 15vw, 6rem) !important;
+            line-height: 1.2;
+        }
+    }
+
+    &__subtitle {
+        font-size: clamp(4rem, 6vw, 4rem);
+        font-family: $font-main;
+        text-transform: uppercase;
+
+        @include desktop {
+            font-size: clamp(3.2rem, 5vw, 3rem) !important;
+        }
+
+        @include tablet {
+            font-size: clamp(2.5rem, 4vw, 2rem) !important;
+            margin-top: 1rem;
+        }
+
+        &.left {
+            align-self: flex-start;
+            margin-left: 10%;
+        }
+        &.right {
+            align-self: flex-end;
+            margin-right: 10%;
+        }
+    }
+
+    &__scroll {
+        position: absolute;
+        bottom: 30px;
+        animation: bounce 2s infinite;
+    }
 }
 
 @keyframes bounce {
-  0%,
-  100%,
-  20%,
-  50%,
-  80% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
 }
