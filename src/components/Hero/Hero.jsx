@@ -8,7 +8,7 @@ const Hero = () => {
   const xRight = useTransform(scrollY, [0, 500], [0, 150]);
 
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       <motion.div style={{ y: yTitle }} className="hero__wrapper">
         <h1 className="hero__title">Gaëlle Mazzali</h1>
       </motion.div>
